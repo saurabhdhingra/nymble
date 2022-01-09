@@ -98,8 +98,8 @@ class _HomePageState extends State<HomePage> {
           }
         }
         print([countP, countC]);
-        if (countP == 2 && countC == 0) {
-          for (int j = 0; j < 3; j++) {
+        if (countC == 1 && countP == 0) {
+          for (int j = 0; j < 3 && flag == false; j++) {
             if (win[i][j] != 1 && win[i][j] == 0) {
               String pos = winal[i][j];
               if (pos == 'b1') {
@@ -142,8 +142,8 @@ class _HomePageState extends State<HomePage> {
               flag = true;
             }
           }
-        } else if (countC == 1 && countP == 0) {
-          for (int j = 0; j < 3 && flag == false; j++) {
+        } else if (countP == 2 && countC == 0) {
+          for (int j = 0; j < 3; j++) {
             if (win[i][j] != 1 && win[i][j] == 0) {
               String pos = winal[i][j];
               if (pos == 'b1') {
